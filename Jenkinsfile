@@ -1,11 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout Scm') {
-      steps {
-        git 'https://github.com/adoptium/temurin20-binaries.git'
-      }
-    }
 
     stage('Shell script 0') {
       steps {
