@@ -6,6 +6,8 @@ pipeline {
       steps {
         withCredentials([string(credentialsId: 'GITHUB_CREDENTIALS_PSW', variable: 'GITHUB_CREDENTIALS_PSW')]) {
           sh '''echo $GITHUB_CREDENTIALS_PSW | gh auth login --with-token --scopes read:org
+                git submodule init
+                git submodule update
                 gh release list'''
         }
 
