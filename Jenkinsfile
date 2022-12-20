@@ -10,7 +10,8 @@ pipeline {
                 git submodule update
                 ls -artl
                 cd temurin20-binaries
-                gh release list'''
+                gh release list | sed 's/|/ /' | awk '{print $1}'
+'''
         }
 
       }
