@@ -12,7 +12,7 @@ pipeline {
                 cd temurin20-binaries
                 releaseName=$(gh release list | sed -n '1p' | sed 's/|/ /' | awk '{print $1}')
                 echo "Downloading for $releaseName"
-                gh release download $releaseName --pattern 'OpenJDK20U-jdk_riscv64_linux_hotspot_*.tar.gz' -D /home/jenkins --skip-existing 
+                gh release download $releaseName --pattern 'OpenJDK20U-jdk_riscv64_linux_hotspot_*.tar.gz' -D /home/jenkins
 '''
         }
 
