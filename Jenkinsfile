@@ -12,6 +12,7 @@ pipeline {
                 git submodule init
                 git submodule update
                 ls -artl
+                java --version
                 cd temurin20-binaries
                 echo "Removing previous binaries"
                 rm -f "/home/jenkins/OpenJDK20U-jdk_riscv64_linux_hotspot_*.tar.gz"
