@@ -18,6 +18,7 @@ pipeline {
                 cd /home/jenkins
                 mainDirName=`tar -tzf OpenJDK20U-jdk_riscv64_linux_hotspot_2022-12-16-15-37.tar.gz | head -1 | cut -f1 -d"/"`
                 echo "We found $mainDirName as the main dir in the archive"
+                rm -fr "$mainDirName"
                 tar -xvzf "/home/jenkins/OpenJDK20U-jdk_riscv64_linux_hotspot_*.tar.gz"
                 rm -f "/home/jenkins/OpenJDK20U-jdk_riscv64_linux_hotspot_*.tar.gz"
                 ls -artl "/home/jenkins/$mainDirName"
