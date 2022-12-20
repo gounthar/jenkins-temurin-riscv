@@ -10,7 +10,7 @@ pipeline {
                 git submodule update
                 ls -artl
                 cd temurin20-binaries
-                release-name=$(gh release list | sed -n '1p' | sed 's/|/ /' | awk '{print $1}')
+                echo "Downloading for $(gh release list | sed -n '1p' | sed 's/|/ /' | awk '{print $1}')"
                 gh release download --pattern 'OpenJDK20U-jdk_riscv64_linux_hotspot_*.tar.gz'
 '''
         }
