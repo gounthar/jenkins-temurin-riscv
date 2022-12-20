@@ -3,10 +3,10 @@ pipeline {
   stages {
 
     stage('Shell script 0') {
+      tools {
+        jdk "jdk20"
+      }
       steps {
-        tools {
-          jdk "jdk20"
-        }
         withCredentials([string(credentialsId: 'GITHUB_CREDENTIALS_PSW', variable: 'GITHUB_CREDENTIALS_PSW')]) {
           sh '''echo $GITHUB_CREDENTIALS_PSW | gh auth login --with-token --scopes read:org
                 git submodule init
