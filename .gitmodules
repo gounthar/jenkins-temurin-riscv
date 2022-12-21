@@ -1,3 +1,7 @@
 [submodule "temurin20-binaries"]
 	path = temurin20-binaries
 	url = https://github.com/adoptium/temurin20-binaries.git
+	
+[submodule "temurin19-binaries"]
+	path = temurin19-binaries
+	url = https://github.com/adoptium/temurin19-binaries.git
