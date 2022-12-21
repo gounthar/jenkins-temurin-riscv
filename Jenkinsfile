@@ -4,7 +4,7 @@ pipeline {
 
     stage('Shell script 0') {
       tools {
-        jdk "jdk20"
+        jdk "jdk17"
       }
       steps {
         withCredentials([string(credentialsId: 'GITHUB_CREDENTIALS_PSW', variable: 'GITHUB_CREDENTIALS_PSW')]) {
