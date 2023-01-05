@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+    label 'riscv'
+  }
   stages {
 
     stage('Installs JDK20') {
