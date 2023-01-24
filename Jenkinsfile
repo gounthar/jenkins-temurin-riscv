@@ -36,7 +36,7 @@ pipeline {
     }
     stage('Installs JDK19') {
       tools {
-        jdk "jdk17"
+        jdk "jdk20"
       }
       steps {
         withCredentials([string(credentialsId: 'GITHUB_CREDENTIALS_PSW', variable: 'GITHUB_CREDENTIALS_PSW')]) {
