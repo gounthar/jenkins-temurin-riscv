@@ -1,7 +1,11 @@
-triggers {
-    cron('5 10 * * *') // Replace 'H H' with your desired hour and minute (in UTC) for the daily schedule
-}
 pipeline {
+    options {
+        // Add the cron syntax below to schedule the build every day at your desired time (in UTC)
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+        // Schedule the build to run every day at 2:30 AM UTC
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+        cron('30 2 * * *')
+    }
   agent {
     label 'riscv'
   }
