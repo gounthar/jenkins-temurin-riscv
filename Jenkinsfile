@@ -1,3 +1,6 @@
+triggers {
+    cron('5 10 * * *') // Replace 'H H' with your desired hour and minute (in UTC) for the daily schedule
+}
 pipeline {
   agent {
     label 'riscv'
