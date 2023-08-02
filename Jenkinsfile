@@ -40,7 +40,7 @@ pipeline {
 
     post {
 
-    always {
+        always {
           tools {
             jdk "jdk20"
           }
