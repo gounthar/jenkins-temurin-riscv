@@ -4,7 +4,7 @@
     cron('30 2 * * *')
     }
     agent {
-    label 'riscv'
+    label 'riscv64'
     }
     stages {
     
