@@ -10,9 +10,6 @@
     
     
     stage('Installs JDK21') {
-    tools {
-    jdk "jdk20"
-    }
     steps {
   withCredentials([string(credentialsId: 'GITHUB_CREDENTIALS_PSW', variable: 'GITHUB_CREDENTIALS_PSW')]) {
                                                                                sh '''echo $GITHUB_CREDENTIALS_PSW | gh auth login --with-token
